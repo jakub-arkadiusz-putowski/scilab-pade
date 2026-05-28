@@ -4,9 +4,9 @@ This toolbox provides a native Scilab implementation of the Padé approximation 
 
 Currently, Scilab's core only provides `expm` for matrix exponentials. This toolbox bridges the gap by allowing users to approximate the time delay operator
 
-\[
+$\[
 e^{-Ls}
-\]
+\]$
 
 directly into a linear system representation (`syslin` transfer function).
 
@@ -61,8 +61,8 @@ G = pade(delay, order)
 
 ### Parameters
 
-- `delay` – A non-negative real scalar representing the time delay \( L \).
-- `order` – A non-negative integer representing the approximation order \( n \).
+- `delay` – A non-negative real scalar representing the time delay $\( L \)$.
+- `order` – A non-negative integer representing the approximation order $\( n \)$.
 
 ### Example
 
@@ -87,7 +87,7 @@ evans(FullSystem);
 
 The toolbox uses the standard Padé table formula:
 
-\[
+$$\[
 R_{n,n}(x) =
 \frac{
 \sum_{k=0}^{n}
@@ -96,13 +96,13 @@ R_{n,n}(x) =
 \sum_{k=0}^{n}
 \frac{(2n-k)! \, n!}{(2n)! \, k! \, (n-k)!} x^k
 }
-\]
+\]$$
 
 where
 
-\[
+$$\[
 x = s \cdot \text{delay}
-\]
+\]$$
 
 ---
 
