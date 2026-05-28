@@ -1,0 +1,7 @@
+Title: Pade Approximation Toolbox
+Version: 1.0.0
+Author: feaxy
+Maintainer: feaxy
+Description: This toolbox provides a Pade approximation for continuous-time delays in Scilab. It converts a time delay into a linear system representation (syslin).
+Category: Control Systems
+ScilabVersion: >= 6.0.0
