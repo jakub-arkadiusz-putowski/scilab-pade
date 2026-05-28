@@ -4,9 +4,9 @@ This toolbox provides a native Scilab implementation of the Padé approximation 
 
 Currently, Scilab's core only provides `expm` for matrix exponentials. This toolbox bridges the gap by allowing users to approximate the time delay operator
 
-$\[
+$$\[
 e^{-Ls}
-\]$
+\]$$
 
 directly into a linear system representation (`syslin` transfer function).
 
