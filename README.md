@@ -1,4 +1,3 @@
-```
 # Pade Approximation Toolbox for Scilab
 
 This toolbox provides a native Scilab implementation of the Padé approximation for continuous-time delays.
