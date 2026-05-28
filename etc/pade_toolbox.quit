@@ -1,0 +1,19 @@
+// etc/pade_toolbox.quit
+
+function stopModule()
+    TOOLBOX_NAME = "pade_toolbox";
+
+    // Usuwanie pomocy (jeśli by istniała)
+    if (getscilabmode() == "NW" | getscilabmode() == "STD") then
+        // del_help_chapter(TOOLBOX_NAME);
+    end
+
+    // Usuwanie dem (jeśli by istniały)
+    if (getscilabmode() == "NW" | getscilabmode() == "STD") then
+        // str = sprintf("clean_demo_gateway(""%s"")", TOOLBOX_NAME);
+        // execstr(str, "errcatch");
+    end
+endfunction
+
+stopModule();
+clear stopModule;

@@ -1,0 +1,38 @@
+// Copyright (C) 2008 - INRIA
+// Copyright (C) 2009 - DIGITEO
+
+// This file is released under the 3-clause BSD license. See COPYING-BSD.
+// etc/pade_toolbox.start
+
+function pade_toolboxlib = startModule()
+
+    TOOLBOX_NAME  = "pade_toolbox";
+    TOOLBOX_TITLE = "Pade Toolbox";
+
+    mprintf("Start " + TOOLBOX_TITLE + "\n");
+
+    // Sprawdź, czy biblioteka już nie jest załadowana
+    if isdef("pade_toolboxlib") then
+        warning("Pade Toolbox library is already loaded");
+        return;
+    end
+
+    // Ustalanie ścieżki głównej toolboksa
+    // Szukamy folderu nadrzędnego względem etc/
+    etc_path = get_absolute_file_path(); 
+    // Przechodzimy o jeden folder wyżej (do głównego katalogu toolboksa)
+    root_path = strsubst(etc_path, "etc" + filesep(), "");
+
+    // Ładowanie makr (Twojej funkcji pade)
+    // =============================================================================
+    mprintf("\tLoad macros\n");
+    pathmacros = pathconvert(root_path + "macros" + filesep());
+    pade_toolboxlib = lib(pathmacros);
+
+    // Reszta sekcji (gateways, Java, help, demos) została usunięta,
+    // ponieważ ich nie używamy w tym toolboksie.
+
+endfunction
+
+pade_toolboxlib = startModule();
+clear startModule;
